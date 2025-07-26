@@ -10,26 +10,26 @@ const ContactSection = () => {
       icon: Mail,
       title: "Email Us",
       details: "info@eternalmindbrains.com",
-      description: "Send us your questions anytime"
+      description: "Send us your questions anytime",
     },
     {
       icon: Phone,
       title: "Call Us",
       details: "+1 (555) 123-4567",
-      description: "Speak with our consultants"
+      description: "Speak with our consultants",
     },
     {
       icon: MapPin,
       title: "Visit Us",
       details: "123 Education Ave, City, State 12345",
-      description: "Schedule an in-person meeting"
+      description: "Schedule an in-person meeting",
     },
     {
       icon: Clock,
       title: "Office Hours",
       details: "Mon-Fri: 9AM-6PM",
-      description: "We're here to help"
-    }
+      description: "We're here to help",
+    },
   ];
 
   return (
@@ -37,9 +37,7 @@ const ContactSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Get In Touch
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Get In Touch</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to start your educational journey? We're here to help you every step of the way.
           </p>
@@ -62,17 +60,17 @@ const ContactSection = () => {
                   <Input placeholder="Enter your last name" />
                 </div>
               </div>
-              
+
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">Email</label>
                 <Input type="email" placeholder="your.email@example.com" />
               </div>
-              
+
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">Phone</label>
                 <Input type="tel" placeholder="+1 (555) 123-4567" />
               </div>
-              
+
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">Service Interest</label>
                 <select className="w-full h-10 px-3 py-2 border border-input bg-background rounded-md text-sm">
@@ -83,15 +81,15 @@ const ContactSection = () => {
                   <option>All Services</option>
                 </select>
               </div>
-              
+
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">Message</label>
-                <Textarea 
+                <Textarea
                   placeholder="Tell us about your educational goals and how we can help..."
                   className="min-h-[120px]"
                 />
               </div>
-              
+
               <Button variant="hero" size="lg" className="w-full">
                 Send Message
               </Button>
@@ -103,7 +101,8 @@ const ContactSection = () => {
             <div className="mb-8">
               <h3 className="text-2xl font-bold mb-4 text-foreground">Contact Information</h3>
               <p className="text-muted-foreground">
-                Get in touch with us through any of these channels. We're committed to responding quickly and helping you with your educational needs.
+                Get in touch with us through any of these channels. We're committed to responding quickly and helping
+                you with your educational needs.
               </p>
             </div>
 
@@ -125,19 +124,6 @@ const ContactSection = () => {
                 </Card>
               ))}
             </div>
-
-            {/* CTA Card */}
-            <Card className="bg-gradient-primary text-primary-foreground">
-              <CardContent className="p-6">
-                <h4 className="text-xl font-bold mb-2">Free Consultation</h4>
-                <p className="mb-4 opacity-90">
-                  Book a free 30-minute consultation to discuss your educational goals and learn how we can help.
-                </p>
-                <Button variant="accent" size="lg">
-                  Book Now
-                </Button>
-              </CardContent>
-            </Card>
 
             {/* FAQ Preview */}
             <div className="mt-8">

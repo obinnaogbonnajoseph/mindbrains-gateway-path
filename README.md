@@ -62,7 +62,46 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/14995eb6-d8b2-45b5-8beb-f35ca9eddcd2) and click on Share -> Publish.
+### GitHub Pages Deployment (Recommended)
+
+This project is configured with GitHub Actions for automatic deployment to GitHub Pages. The deployment pipeline will automatically build and deploy your application on every push to the main branch.
+
+#### Setup Instructions:
+
+1. **Enable GitHub Pages**:
+
+   - Go to your repository on GitHub
+   - Navigate to Settings → Pages
+   - Under "Source", select "GitHub Actions"
+   - The workflow will automatically deploy to GitHub Pages
+
+2. **Push to Deploy**:
+
+   - Simply push your changes to the `main` or `master` branch
+   - The GitHub Actions workflow will automatically:
+     - Install dependencies
+     - Build the project
+     - Deploy to GitHub Pages
+
+3. **Access Your Site**:
+   - Your site will be available at: `https://<your-username>.github.io/mindbrains-gateway-path/`
+   - The first deployment may take a few minutes to complete
+
+#### Manual Deployment:
+
+If you prefer to deploy manually:
+
+```sh
+# Build the project
+npm run build
+
+# The built files will be in the `dist` directory
+# You can then deploy these files to any static hosting service
+```
+
+### Lovable Deployment
+
+You can also deploy using Lovable by opening [Lovable](https://lovable.dev/projects/14995eb6-d8b2-45b5-8beb-f35ca9eddcd2) and clicking on Share → Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 

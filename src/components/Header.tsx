@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -9,7 +8,7 @@ const Header = () => {
     { name: "Home", href: "#home" },
     { name: "Services", href: "#services" },
     { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" }
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -26,8 +25,8 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a 
+            {navItems.map(item => (
+              <a
                 key={item.name}
                 href={item.href}
                 className="text-foreground hover:text-primary transition-colors duration-200"
@@ -37,26 +36,9 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              Login
-            </Button>
-            <Button variant="default" size="sm">
-              Get Started
-            </Button>
-          </div>
-
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <X className="w-6 h-6 text-foreground" />
-            ) : (
-              <Menu className="w-6 h-6 text-foreground" />
-            )}
+          <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X className="w-6 h-6 text-foreground" /> : <Menu className="w-6 h-6 text-foreground" />}
           </button>
         </div>
 
@@ -64,8 +46,8 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4">
             <nav className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <a 
+              {navItems.map(item => (
+                <a
                   key={item.name}
                   href={item.href}
                   className="text-foreground hover:text-primary transition-colors duration-200 py-2"
@@ -74,14 +56,6 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <div className="flex flex-col space-y-2 pt-4 border-t border-border">
-                <Button variant="outline" size="sm">
-                  Login
-                </Button>
-                <Button variant="default" size="sm">
-                  Get Started
-                </Button>
-              </div>
             </nav>
           </div>
         )}
