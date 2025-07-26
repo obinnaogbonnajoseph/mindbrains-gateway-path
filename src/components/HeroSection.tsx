@@ -6,11 +6,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="Students studying together" 
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Students studying together" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary-glow/80"></div>
       </div>
 
@@ -18,22 +14,22 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-primary-foreground">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           Your Gateway to
-          <span className="block bg-gradient-accent bg-clip-text text-transparent">
-            Educational Excellence
-          </span>
+          <span className="block bg-gradient-accent bg-clip-text text-transparent">Educational Excellence</span>
         </h1>
-        
+
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-          Eternal Mindbrains helps students achieve their dreams through expert admission guidance, 
-          seamless application processing, and comprehensive visa support.
+          Eternal Mindbrains helps students achieve their dreams through expert admission guidance, seamless application
+          processing, and comprehensive visa support.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button variant="hero" size="lg" className="text-lg px-8 py-4">
-            Get Started Today
-          </Button>
-          <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-            Learn More
+          <Button
+            variant="hero"
+            size="lg"
+            className="text-lg px-8 py-4 hover:bg-primary-foreground hover:text-primary"
+            asChild
+          >
+            <a href="#services">Learn More</a>
           </Button>
         </div>
 
